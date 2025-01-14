@@ -1,0 +1,21 @@
+[tools]
+actionlint = "1"
+dprint = "0.47"
+pre-commit = "4"
+shfmt = "3"
+
+node = "20"
+go = "1.23"
+
+uv = "0.5"
+
+[tasks.lint]
+run = [
+  "actionlint --color",
+  "dprint check",
+]
+
+[tasks.fmt]
+run = [
+  "dprint fmt",
+]
